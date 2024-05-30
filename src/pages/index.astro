@@ -9,9 +9,7 @@ import WordMark from '../components/WordMark.astro';
     <h1>Welcome to</h1>
     <WordMark />
     <p class='instructions'>
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+      Connecting innovators and opportunities. Our mission is to foster a vibrant community where tech enthusiasts can network, showcase their projects, collaborate in a fun and dynamic environment, and discover new career opportunities. We aim to bridge the gap between talent and companies, creating a thriving ecosystem for growth and innovation.
     </p>
     <ul role='list' class='link-card-grid'>
       <Card
@@ -40,6 +38,7 @@ import WordMark from '../components/WordMark.astro';
 
 <style>
   main {
+		box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -47,7 +46,7 @@ import WordMark from '../components/WordMark.astro';
 		background: linear-gradient(to bottom, #4f46e6, #c7c6f3 75%, #ff957b 100%);
     padding: 1rem;
     width: 100vw;
-    max-width: calc(100vw - 2rem);
+    max-width: calc(100% - 2rem);
     color: white;
     font-size: 1.7rem;
     line-height: 1.6;
@@ -67,6 +66,7 @@ import WordMark from '../components/WordMark.astro';
     line-height: 1;
 		margin: 0;
 		padding-bottom: 1rem;
+		padding-top: 3rem;
     text-align: center;
   }
   .text-gradient {
