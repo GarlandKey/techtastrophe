@@ -8,7 +8,7 @@ import WordMark from '../components/WordMark.astro';
   <main>
     <h1>Welcome to</h1>
     <WordMark />
-    <p class='instructions'>
+    <p>
       Connecting innovators and opportunities. Our mission is to foster a vibrant community where tech enthusiasts can network, showcase their projects, collaborate in a fun and dynamic environment, and discover new career opportunities. We aim to bridge the gap between talent and companies, creating a thriving ecosystem for growth and innovation.
     </p>
     <ul role='list' class='link-card-grid'>
@@ -38,7 +38,6 @@ import WordMark from '../components/WordMark.astro';
 
 <style>
   main {
-		box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -76,27 +75,32 @@ import WordMark from '../components/WordMark.astro';
     background-size: 400%;
     background-position: 0%;
   }
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
+  p {
+    margin: 2rem 0 ;
     background: linear-gradient(
       rgba(var(--accent-dark), 66%),
       rgba(var(--accent-dark), 33%)
+      25%
     );
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 4rem;
+    border-radius: 1rem;
+    width: calc(100% - 4rem);
+    max-width: 50rem;
   }
-  .instructions code {
-    font-size: 0.8em;
+	
+  code {
+    font-size: 0.8rem;
     font-weight: bold;
     background: rgba(var(--accent-light), 12%);
     color: rgb(var(--accent-light));
     border-radius: 4px;
-    padding: 0.3em 0.4em;
+    padding: 0.3rem 0.4rem;
   }
-  .instructions strong {
+  
+  strong {
     color: rgb(var(--accent-light));
   }
+
   .link-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
