@@ -44,21 +44,12 @@ import WordMark from '../components/WordMark.astro';
     justify-content: center;
 		background: linear-gradient(to bottom, #4f46e6, #c7c6f3 75%, #ff957b 100%);
     padding: 1rem;
-    width: 100vw;
-    max-width: calc(100% - 2rem);
+    width: 100%;
     color: white;
     font-size: 1.7rem;
     line-height: 1.6;
   }
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
-  }
+
   h1 {
     font-size: 4rem;
     font-weight: 700;
@@ -68,6 +59,7 @@ import WordMark from '../components/WordMark.astro';
 		padding-top: 3rem;
     text-align: center;
   }
+
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
@@ -86,19 +78,6 @@ import WordMark from '../components/WordMark.astro';
     border-radius: 1rem;
     width: calc(100% - 4rem);
     max-width: 50rem;
-  }
-	
-  code {
-    font-size: 0.8rem;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3rem 0.4rem;
-  }
-  
-  strong {
-    color: rgb(var(--accent-light));
   }
 
   .link-card-grid {
