@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+}
+
+section {
+  display: block;
+}
+
+footer {
+  background-color: #1C0202;
+  height: 100vh;
+  position: relative;
+  z-index: 98;
+}
+
+.parallax {
+  position: relative;
+  z-index: 10;
+}
+
+.parallax-background {
+  height: 1000px;
+  background-color: #ffaf1b;
+}
+
+.col-md-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.absolute {
+  position: absolute;
+}
+
+#parallax {
+  height: 1000px;
+  overflow: hidden;
+  position: relative;
+}
+
+.layer {
+  background-position: top center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: fixed;
+}
+
+#hero-mobile {
+  display: none;
+  background: url("../assets/parallax-mobile.jpg") no-repeat center bottom/cover;
+  height: 1000px;
+}
+
+#parallax,
+.layer {
+  min-height: 1000px;
+}
+
+.layer-0 {
+  background-image: url("../assets/parallax0.png");
+  background-position: top center;
+  background-size: cover;
+  background-color: #ffaf1b;
+}
+
+.layer-1 {
+  background: linear-gradient(to bottom, #4f46e6, #c7c6f3 75%, #ff957b 100%);
+}
+
+.layer-2 {
+  background-image: url("../assets/wordmark.svg");
+}
+
+.layer-3 {
+  background-image: url("../assets/mountains.svg");
+}
+
+.layer-4 {
+  background-image: url("../assets/hills.svg");
+}
+
+.layer-5 {
+  background-image: url("../assets/valley.svg");
+}
+
+.layer-6 {
+  background-image: url("../assets/robot.svg");
+}
+
+.layer-7 {
+  background-image: url("../assets/downtown.svg");
+}
+
+.no-padding {
+  padding: 0 0;
+}
+
+.no-margin {
+  margin: 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #parallax {
+    display: none;
+  }
+
+  #hero-mobile {
+    display: block;
+  }
+
+  .nav-button {
+    background-color: transparent;
+    padding-top: 5%;
+    padding-right: 8%;
+    top: 1rem;
+    right: 1rem;
+  }
+}
