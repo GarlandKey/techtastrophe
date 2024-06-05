@@ -1,0 +1,83 @@
+---
+import downtown from '../assets/downtown.svg';
+import hills from '../assets/hills.svg';
+import mountains from '../assets/mountains.svg';
+import robot from '../assets/robot.svg';
+import valley from '../assets/valley.svg';
+import wordmark from '../assets/wordmark.svg';
+
+// const { href, title, body } = Astro.props;
+---
+
+<section class='parallax'>
+  <span class='sky' />
+  <img src={wordmark.src} alt='Techtastrophe' class='wordmark' />
+  <img src={downtown.src} alt='' class='downtown' />
+  <img src={robot.src} alt='' class='robot' />
+  <img src={valley.src} alt='' class='valley' />
+  <img src={hills.src} alt='' class='hills' />
+  <img src={mountains.src} alt='' class='mountains' />
+</section>
+<style>
+  .parallax {
+    display: grid;
+    grid-template-areas: 'stack';
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    place-items: center;
+    position: relative;
+    width: 100vw;
+  }
+
+  .parallax > * {
+    grid-area: stack;
+  }
+
+  .downtown {
+    inset: 0;
+    width: 100%;
+    z-index: 7;
+  }
+
+  .hills {
+    inset: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .mountains {
+    inset: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .robot {
+    inset: 0;
+    width: 100%;
+    z-index: 6;
+  }
+
+  .sky {
+    background: linear-gradient(to bottom, #4f46e6, #c7c6f3 45%, #ff957b 100%);
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .valley {
+    inset: 0;
+    width: 100%;
+    z-index: 4;
+  }
+
+  .wordmark {
+    min-width: 30rem;
+    position: absolute;
+    top: 4rem;
+    width: 80vw;
+    z-index: 5;
+  }
+</style>

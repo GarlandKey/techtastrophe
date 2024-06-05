@@ -1,89 +1,88 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import WordMark from '../components/WordMark.astro';
+import Layout from '../layouts/Layout.astro';
+import downtown from '../assets/downtown.svg';
+import hills from '../assets/hills.svg';
+import mountains from '../assets/mountains.svg';
+import robot from '../assets/robot.svg';
+import valley from '../assets/valley.svg';
+import wordmark from '../assets/wordmark.svg';
 ---
-
 <Layout title="Techtastrophe - Roanoke's Tech Takeover">
-  <main>
-    <h1>Welcome to</h1>
-    <WordMark />
-    <p>
-      Connecting innovators and opportunities. Our mission is to foster a vibrant community where tech enthusiasts can network, showcase their projects, collaborate in a fun and dynamic environment, and discover new career opportunities. We aim to bridge the gap between talent and companies, creating a thriving ecosystem for growth and innovation.
-    </p>
-    <ul role='list' class='link-card-grid'>
-      <Card
-        href='https://docs.astro.build/'
-        title='Documentation'
-        body='Learn how Astro works and explore the official API docs.'
-      />
-      <Card
-        href='https://astro.build/integrations/'
-        title='Integrations'
-        body='Supercharge your project with new frameworks and libraries.'
-      />
-      <Card
-        href='https://astro.build/themes/'
-        title='Themes'
-        body='Explore a galaxy of community-built starter themes.'
-      />
-      <Card
-        href='https://astro.build/chat/'
-        title='Community'
-        body='Come say hi to our amazing Discord community. ❤️'
-      />
-    </ul>
+  <main class='parallax'>
+    <header class='hero'>
+      <span class='sky' />
+      <img src={mountains.src} alt='' class='mountains' />
+      <img src={hills.src} alt='' class='hills' />
+      <img src={valley.src} alt='' class='valley' />
+      <img src={wordmark.src} alt='' class='wordmark' />
+      <img src={robot.src} alt='' class='robot' />
+      <img src={downtown.src} alt='' class='downtown' />
+    </header>
+    <section class='block' />
   </main>
 </Layout>
 
 <style>
-  main {
+  .parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+  }
+
+  .hero {
+    position: relative;
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
     justify-content: center;
-		background: linear-gradient(to bottom, #4f46e6, #c7c6f3 75%, #ff957b 100%);
-    padding: 1rem;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+  }
+
+  .downtown, .hills, .mountains, .robot, .sky, .valley, .wordmark {
+    position: absolute;
+    height: 100%;
     width: 100%;
-    color: white;
-    font-size: 1.7rem;
-    line-height: 1.6;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: -1;
   }
 
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-		margin: 0;
-		padding-bottom: 1rem;
-		padding-top: 3rem;
-    text-align: center;
+  .sky {
+    background: linear-gradient(to bottom, #4f46e6, #c7c6f3 75%, #ff957b 100%);
+    transform: translateZ(-60px) scale(7);
   }
 
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  p {
-    margin: 2rem 0 ;
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-      25%
-    );
-    padding: 4rem;
-    border-radius: 1rem;
-    width: calc(100% - 4rem);
-    max-width: 50rem;
+  .mountains {
+    transform: translateZ(-50px) scale(6);
   }
 
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
+  .hills {
+    transform: translateZ(-40px) scale(5);
   }
+
+  .wordmark {
+    transform: translateZ(-20px) scale(3);
+  }
+
+  .downtown {
+    transform: translateZ(-5px) scale(1.5);
+  }
+
+  .robot {
+    transform: translateZ(-10px) scale(2);
+  }
+
+  .valley {
+    transform: translateZ(-30px) scale(4);
+  }
+
+  .block {
+    background: red;
+    height: 200vh;
+    width: 100%;
+  }
+
 </style>
