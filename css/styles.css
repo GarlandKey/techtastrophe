@@ -177,7 +177,8 @@ footer small a:hover {
   background-color: #000;
   color: #fff;
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   padding: 5rem;
   position: relative;
   z-index: 98;
@@ -186,14 +187,17 @@ footer small a:hover {
 .about p {
   font-family: system-ui;
   font-size: 1.6rem;
+  line-height: 2.5rem;
+  max-width: 70rem;
+  min-width: 50rem;
   padding: 5rem;
   text-align: justify;
-  width: 45%;
 }
 
 .about img {
   border-radius: 5rem;
-  width: 50%;
+  min-width: 30rem;
+  width: 35%;
 }
 
 .values {
