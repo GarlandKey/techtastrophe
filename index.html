@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Techtastrophe - Roanoke's Tech Takeover!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-
 <body>
-  <section class="parallax">
-    <div class="container-fluid no-padding">
-      <div id='parallax'>
-        <div class='layer-0 layer' data-depth='0.02' data-type='parallax'></div>
-        <div class='layer-1 layer' data-depth='0.05' data-type='parallax'></div>
-        <div class='layer-2 layer' data-depth='0.11' data-type='parallax'></div>
-        <div class='layer-3 layer' data-depth='0.16' data-type='parallax'></div>
-        <div class='layer-4 layer' data-depth='0.26' data-type='parallax'></div>
-        <div class='layer-5 layer' data-depth='0.36' data-type='parallax'></div>
-        <div class='layer-6 layer' data-depth='0.49' data-type='parallax'></div>
-        <div class='layer-7 layer absolute' data-depth='1.00' data-type='parallax'></div>
-      </div>
-      <div id='parallax-mobile'></div>
-    </div>
-  </section>
-  <section class="about">
-    <p>Join us for an exciting local tech meetup designed to connect experts in the tech industry, local businesses seeking tech talent, and individuals eager to join the tech community. Our inclusive and diverse environment fosters networking, knowledge sharing, and career opportunities. Don't miss this chance to be part of the vibrant local tech scene!</p>
-    <img src="./assets/people.webp" alt="People sitting and eating at a conference.">
-  </section>
-  <section class="values">
-    <div>
-      <h2>Collaborate</h2>
-      <p>Join our tech meetups to connect and collaborate on exciting projects. Experts and innovators come together to share ideas, work on joint ventures, and push the boundaries of technology.</p>
-    </div>
-    <div>
-      <h2>Share</h2>
-      <p>Each month we'll have a new theme that will encourage everyone to bring their latest projects to show off and collaborate on.</p>
-    </div>
-    <div>
-      <h2>Network</h2>
-      <p>Join our tech meetups to connect with local companies eager to recruit local talent. Network with industry leaders, showcase your skills, and discover exciting career opportunities right here in Roanoke.</p>
-    </div>
+  <header>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>Merch</li>
+        <li>Sign-up</li>
+        <li>Sponsor</li>
+      </ul>
+    </nav>
+    <ul>
+      <li><a href="https://www.facebook.com"><img src="./assets/facebook.svg" alt="Facebook" class="icon"></a></li>
+      <li><a href="https://www.instagram.com"><img src="./assets/instagram.svg" alt="Instagram" class="icon"></a></li>
+      <li><a href="https://www.twitter.com"><img src="./assets/twitter.svg" alt="Twitter" class="icon"></a></li>
+    </ul>
+  </header>
+  <section>
+    <div class="background-container">
+      <div class="a blue"></div>
+      <div class="b blue"></div>
+      <div class="c blue"></div>
+    </div>    
+    <img src="./assets/wordmark.svg" alt="Techtastrophe - Roanoke's Tech Takeover!" class="logo" />
+    <div class="section-image robot-scene" />
   </section>
   <section>
-
+    <div class="background-container">
+      <div class="a orange"></div>
+      <div class="b orange"></div>
+      <div class="c orange"></div>
+    </div>
+    <div class="section-image network-scene"></div>
+    <article>
+      <h2>Network</h2>
+      <p>Meet fellow tech professionals, share ideas, and build connections that could boost your career.</p>
+      <img src="./assets/robot.svg" alt="Giant Robot Says" />
+    </article>
+  </section>
+  <section>
+    <div class="background-container">
+      <div class="a purple"></div>
+      <div class="b purple"></div>
+      <div class="c purple"></div>
+    </div>
+    <div class="section-image recruit-scene"></div>
+    <article>
+      <h2>Recruit</h2>
+      <p>We want to attract local companies that are eager to connect with and recruit local tech talent.</p>
+      <img src="./assets/robot.svg" alt="Giant Robot Says" />
+    </article>
+  </section>
+  <section>
+    <div class="background-container">
+      <div class="a red"></div>
+      <div class="b red"></div>
+      <div class="c red"></div>
+    </div>
+    <div class="section-image showcase-scene"></div>
+    <article>
+      <h2>Showcase</h2>
+      <p>Each event will have a unique showcase. From game jam finalists to Roanoke's finest digital artwork! The possibilities are endless!</p>
+      <img src="./assets/robot.svg" alt="Giant Robot Says" />
+    </article>
+  </section>
+  <section>
+    <div class="background-container">
+      <div class="a green"></div>
+      <div class="b green"></div>
+      <div class="c green"></div>
+    </div>
+    <div class="form-container">
+      <img src="./assets/robot.svg" alt="Giant Robot Says" />
+      <form>
+        <h2>RSVP Now!</h2>
+        <input type="text" placeholder="Name"/>
+        <input type="email" placeholder="Email"/>
+        <input type="submit" value="Submit"/>
+      </form>
+    </div>
   </section>
   <footer>
-    <small><a href="https://garlandkey.com">Garland Key</a> &copy; 2024</small>
+    <small>Sponsored by: <em>MONUMENTAL</em> &trade;</small>
+    <small>Techtastrophe &copy; 2024</small>
   </footer>
-  <script src="js/parallax.js"></script>
 </body>
-
 </html>
